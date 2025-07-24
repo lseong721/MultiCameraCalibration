@@ -1,8 +1,8 @@
 import open3d as o3d
 import numpy as np
-from calibrator.utils import get_board_points_in_world
 import matplotlib.pyplot as plt
 import cv2
+import os
 
 def create_camera_mesh(scale=1.0):
     """Create a simple Open3D pyramid mesh to represent a camera."""
