@@ -46,3 +46,9 @@ These images should all contain the same chessboard pattern for reliable multi-c
 - OpenCV
 - NumPy
 - SciPy
+
+## 🖼️ Example Result
+
+Example visualization of calibrated camera poses and board positions:
+
+![Result](figs/result.png)
