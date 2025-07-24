@@ -51,4 +51,4 @@ These images should all contain the same chessboard pattern for reliable multi-c
 
 Example visualization of calibrated camera poses and board positions:
 
-![Result](figs/result.png)
+![Result](fig/result.png)
