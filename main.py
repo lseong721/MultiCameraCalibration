@@ -4,7 +4,6 @@ from calibrator.calibrate_camera import calibrate_individual_cameras, filter_poi
 from calibrator.extrinsics import estimate_extrinsics_via_best_path
 from calibrator.optimize import optimize_bundle
 from calibrator.visualize import draw_cameras_and_points
-from calibrator.utils import *
 import numpy as np
 
 
@@ -30,10 +29,7 @@ def main():
     result, extrinsics = optimize_bundle(camera_params, extrinsics, objpoints, imgpoints, optimize_intrinsic=False)
 
     print("[6] Visualizing cameras and calibration board...")
-    sample_board = list(objpoints.values())[0]  # first camera's object points
-    board_points = next(iter(sample_board.values()))  # (N, 3)
-    board_points = get_board_points_in_world(objpoints, camera_params, ref_cam='00')
-    draw_cameras_and_points(camera_params, extrinsics, board_points, ref_cam='00')
+    draw_cameras_and_points(camera_params, extrinsics, objpoints, checkerboard_size, ref_cam='00')
 
 
 
